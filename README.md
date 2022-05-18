@@ -1,2 +1,2 @@
-# steven-g-w-cv
+# Steven Wang CV
 The CV for Steven Wang
