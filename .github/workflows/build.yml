@@ -9,11 +9,20 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
 
       # Same scripts as local setup, so CI also proves the one-line setup works.
       - name: Cache TinyTeX
@@ -23,10 +32,12 @@ jobs:
           key: tinytex-${{ runner.os }}-${{ hashFiles('tex-packages.txt') }}-${{ github.run_id }}
           restore-keys: tinytex-${{ runner.os }}-${{ hashFiles('tex-packages.txt') }}-
 
-      - name: Setup (TinyTeX + packages)
+      - name: Setup (TinyTeX, TeX packages, Python env)
         run: sh scripts/setup.sh
 
-      - name: Build PDF
+      # Validates cv.yaml against cv.schema.json, then renders the PDF and web page.
+      # CV_PHONE is intentionally not set: public builds show "Available upon request".
+      - name: Build PDF and web page
         run: sh scripts/build.sh
 
       # Errors already fail the build (-halt-on-error); surface warnings as annotations.
@@ -46,3 +57,24 @@ jobs:
         with:
           name: cv-log
           path: build/cv.log
+
+      - name: Upload site for GitHub Pages
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CV",
+  "description": "Single source of truth for the CV (cv.yaml). Rendered to PDF and HTML by generator/build.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["basics", "sections"],
+  "$defs": {
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Plain text. Supports **bold**."
+    },
+    "icon": {
+      "type": "string",
+      "pattern": "^[a-z][a-z-]*$",
+      "description": "Font Awesome 4 icon name, e.g. suitcase, mortar-board, certificate, tasks, laptop."
+    },
+    "hidden": {
+      "type": "boolean",
+      "description": "Set true to keep the content in the file but leave it out of the PDF and web page."
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "organization"],
+      "properties": {
+        "start": { "type": "string", "description": "Shown on top, e.g. JAN 2023." },
+        "end": { "type": "string", "description": "Shown below start, e.g. DEC 2023 or NOW." },
+        "organization": { "$ref": "#/$defs/text" },
+        "location": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "summary": { "$ref": "#/$defs/text" },
+        "highlights": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+        "tags": { "type": "array", "items": { "type": "string", "pattern": "^[^,]+$" } },
+        "hidden": { "$ref": "#/$defs/hidden" }
+      }
+    }
+  },
+  "properties": {
+    "basics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["first_name", "last_name", "tagline", "email"],
+      "properties": {
+        "first_name": { "type": "string" },
+        "last_name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "linkedin": { "type": "string", "description": "LinkedIn handle (linkedin.com/in/<handle>)." },
+        "github": { "type": "string", "description": "GitHub username." },
+        "website": { "type": "string", "format": "uri" },
+        "location": { "type": "string" },
+        "info": { "type": "string" },
+        "footer": { "type": "string", "description": "Centre footer text on every PDF page." }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "oneOf": [
+          {
+            "additionalProperties": false,
+            "required": ["type", "text"],
+            "properties": {
+              "type": { "const": "summary" },
+              "text": { "$ref": "#/$defs/text" },
+              "hidden": { "$ref": "#/$defs/hidden" }
+            }
+          },
+          {
+            "additionalProperties": false,
+            "required": ["type", "title", "items"],
+            "properties": {
+              "type": { "const": "skills" },
+              "title": { "type": "string" },
+              "icon": { "$ref": "#/$defs/icon" },
+              "hidden": { "$ref": "#/$defs/hidden" },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["name", "value"],
+                  "properties": {
+                    "name": { "type": "string" },
+                    "value": { "$ref": "#/$defs/text" },
+                    "hidden": { "$ref": "#/$defs/hidden" }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "additionalProperties": false,
+            "required": ["type", "title", "entries"],
+            "properties": {
+              "type": { "const": "experience" },
+              "title": { "type": "string" },
+              "icon": { "$ref": "#/$defs/icon" },
+              "hidden": { "$ref": "#/$defs/hidden" },
+              "entries": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
+            }
+          },
+          {
+            "additionalProperties": false,
+            "required": ["type", "title", "items"],
+            "properties": {
+              "type": { "const": "list" },
+              "title": { "type": "string" },
+              "icon": { "$ref": "#/$defs/icon" },
+              "hidden": { "$ref": "#/$defs/hidden" },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["text"],
+                  "properties": {
+                    "date": { "type": "string" },
+                    "text": { "$ref": "#/$defs/text" },
+                    "hidden": { "$ref": "#/$defs/hidden" }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

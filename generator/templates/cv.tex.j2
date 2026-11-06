@@ -1,0 +1,88 @@
+% GENERATED from cv.yaml by generator/build.py: do not edit, changes will be overwritten.
+% Layout lives in documentMETADATA.cls; content lives in cv.yaml.
+\documentclass[localFont,alternative]{documentMETADATA}
+\name{((( basics.first_name|latex )))}{((( basics.last_name|latex )))}
+\tagline{((( basics.tagline|latex )))}
+
+\socialinfo{
+((* if basics.linkedin *))
+	\linkedin{((( basics.linkedin )))}
+((* endif *))
+((* if basics.github *))
+	\github{((( basics.github )))}
+((* endif *))
+((* if basics.website *))
+	\website{((( basics.website )))}{((( basics.website|latex )))}
+((* endif *))
+	\smartphone{((( phone|latex )))}
+	\email{((( basics.email )))}\\
+((* if basics.location *))
+	\address{((( basics.location|latex )))}
+((* endif *))
+((* if basics.info *))
+	\infos{((( basics.info|latex )))}
+((* endif *))
+}
+
+\begin{document}
+
+\makecvheader
+
+\makecvfooter
+	{}
+	{\textsc{((( (basics.footer or '')|latex )))}}
+	{\thepage}
+
+((* for section in cv.sections *))
+((* if section.type == 'summary' *))
+\par{((( section.text|latex )))}
+
+((* elif section.type == 'skills' *))
+\sectionTitle{((( section.title|latex )))}{((( (section.icon or 'tasks')|fa_latex )))}
+\begin{keywords}
+((* for item in section['items'] *))
+	\keywordsentry{((( item.name|latex )))}{((( item.value|latex )))}
+((* endfor *))
+\end{keywords}
+
+((* elif section.type == 'experience' *))
+\sectionTitle{((( section.title|latex )))}{((( (section.icon or 'suitcase')|fa_latex )))}
+\begin{experiences}
+((* for e in section.entries *))
+	\cventry
+		{((( (e.start or '')|latex )))}
+		{((( entry_header(e)|latex )))}
+		{((( (e.end or '')|latex )))}
+		{%
+((* if e.url *))
+			\link{((( e.url )))}{((( e.url|latex )))}\par
+((* endif *))
+((* if e.summary *))
+			((( e.summary|latex )))
+((* endif *))
+((* if e.highlights *))
+			\begin{itemize}
+((* for h in e.highlights *))
+				\item ((( h|latex )))
+((* endfor *))
+			\end{itemize}
+((* endif *))
+		}
+		{((( (e.tags or [])|map('latex')|join(', ') )))}
+((* if not loop.last *))
+	\emptySeparator
+((* endif *))
+((* endfor *))
+\end{experiences}
+
+((* elif section.type == 'list' *))
+\sectionTitle{((( section.title|latex )))}{((( (section.icon or 'certificate')|fa_latex )))}
+\begin{scholarship}
+((* for item in section['items'] *))
+	\scholarshipentry{((( (item.date or '')|latex )))}{((( item.text|latex )))}
+((* endfor *))
+\end{scholarship}
+
+((* endif *))
+((* endfor *))
+\end{document}

@@ -2,14 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "CV: setup (install TinyTeX + packages)",
+      "label": "CV: setup (TinyTeX, packages, Python)",
       "type": "shell",
       "windows": { "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup.ps1" },
       "command": "sh scripts/setup.sh",
       "problemMatcher": []
     },
     {
-      "label": "CV: build PDF",
+      "label": "CV: build PDF + web page",
       "type": "shell",
       "windows": { "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1" },
       "command": "sh scripts/build.sh",
@@ -17,7 +17,7 @@
       "problemMatcher": []
     },
     {
-      "label": "CV: watch (rebuild on change)",
+      "label": "CV: watch (rebuild when cv.yaml changes)",
       "type": "shell",
       "windows": { "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1 -Watch" },
       "command": "sh scripts/build.sh --watch",

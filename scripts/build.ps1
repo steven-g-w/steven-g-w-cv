@@ -1,17 +1,14 @@
-# Build the CV to build\cv.pdf.
-# Usage:  powershell -ExecutionPolicy Bypass -File scripts\build.ps1 [-Watch] [-Clean]
-param([switch]$Watch, [switch]$Clean)
+# Build the CV from cv.yaml: build\cv.pdf and the web page in build\site\.
+# Usage:  powershell -ExecutionPolicy Bypass -File scripts\build.ps1 [-Watch] [-Clean] [-NoPdf]
+param([switch]$Watch, [switch]$Clean, [switch]$NoPdf)
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
-. "$PSScriptRoot\tinytex-path.ps1"
+$python = "$root\.venv\Scripts\python.exe"
+if (-not (Test-Path $python)) { throw 'No .venv found. Run scripts\setup.ps1 first.' }
 
-Push-Location "$root\src"
-try {
-    if ($Clean) { & latexmk -C cv.tex; exit $LASTEXITCODE }
-    $extra = if ($Watch) { @('-pvc', '-view=none') } else { @() }
-    & latexmk @extra cv.tex
-    if ($LASTEXITCODE) { throw "Build failed (see build\cv.log)" }
-    Write-Host "`nBuilt: $root\build\cv.pdf"
-} finally {
-    Pop-Location
-}
+$opts = @()
+if ($Watch) { $opts += '--watch' }
+if ($Clean) { $opts += '--clean' }
+if ($NoPdf) { $opts += '--no-pdf' }
+& $python "$root\generator\build.py" @opts
+exit $LASTEXITCODE

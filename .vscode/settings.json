@@ -1,23 +1,8 @@
 {
-  // LaTeX Workshop: build on save with the same latexmk config as the scripts and CI (src/.latexmkrc).
-  "latex-workshop.latex.rootFile.useSubFile": false,
-  "latex-workshop.latex.search.rootFiles.include": ["src/cv.tex"],
-  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/build",
-  "latex-workshop.latex.autoBuild.run": "onSave",
-  "latex-workshop.latex.recipe.default": "cv (latexmk)",
-  "latex-workshop.latex.recipes": [
-    { "name": "cv (latexmk)", "tools": ["latexmk-cv"] }
-  ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "latexmk-cv",
-      "command": "latexmk",
-      "args": ["cv.tex"],
-      "env": {}
-    }
-  ],
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.autoClean.run": "never",
-  "files.associations": { "*.cls": "latex" },
-  "[latex]": { "editor.wordWrap": "on" }
+  // cv.yaml is validated against cv.schema.json (autocomplete + errors) by the YAML extension.
+  "yaml.schemas": { "./cv.schema.json": "cv.yaml" },
+  "[yaml]": { "editor.wordWrap": "on" },
+  "files.associations": { "*.cls": "latex", "*.tex.j2": "latex", "*.html.j2": "jinja-html" },
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
+  "files.exclude": { "**/__pycache__": true }
 }

@@ -32,5 +32,15 @@ if [ -n "$missing" ]; then
   exit 1
 fi
 
+echo "==> Setting up Python environment (.venv)..."
+command -v python3 >/dev/null 2>&1 || { echo "python3 (3.10+) not found; install it and re-run." >&2; exit 1; }
+[ -x "$root/.venv/bin/python" ] || python3 -m venv "$root/.venv"
+"$root/.venv/bin/python" -m pip install --quiet --disable-pip-version-check -r "$root/requirements.txt"
+
+if [ ! -f "$root/.env" ] && [ -z "${CI:-}" ]; then
+  cp "$root/.env.example" "$root/.env"
+  echo "==> Created .env: put your real phone number in it (it is git-ignored)."
+fi
+
 echo
 echo "Setup complete. Build with:  ./scripts/build.sh"

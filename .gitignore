@@ -1,6 +1,14 @@
 # Build output
 build/
 
+# Generated from cv.yaml by generator/build.py
+latex/cv.tex
+
+# Local secrets (phone number etc.) and Python env
+.env
+.venv/
+__pycache__/
+
 # LaTeX intermediates (in case something builds outside build/)
 *.aux
 *.log
@@ -11,7 +19,6 @@ build/
 *.synctex(busy)
 *.xdv
 *.toc
-src/*.pdf
 
 # Overleaf export used for the migration — never commit
 original/

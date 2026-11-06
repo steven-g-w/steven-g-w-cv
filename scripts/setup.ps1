@@ -31,4 +31,19 @@ if (Get-Command tlmgr -ErrorAction SilentlyContinue) {
     Write-Host '==> tlmgr not found (MiKTeX?). Packages will be installed on demand.'
 }
 
+Write-Host '==> Setting up Python environment (.venv)...'
+if (-not (Test-Path "$root\.venv\Scripts\python.exe")) {
+    if (Get-Command python -ErrorAction SilentlyContinue) { & python -m venv "$root\.venv" }
+    elseif (Get-Command py -ErrorAction SilentlyContinue) { & py -3 -m venv "$root\.venv" }
+    else { throw 'Python 3.10+ not found. Install it (e.g. winget install Python.Python.3.12) and re-run.' }
+    if ($LASTEXITCODE) { throw 'Creating .venv failed' }
+}
+& "$root\.venv\Scripts\python.exe" -m pip install --quiet --disable-pip-version-check -r "$root\requirements.txt"
+if ($LASTEXITCODE) { throw 'pip install failed' }
+
+if (-not (Test-Path "$root\.env")) {
+    Copy-Item "$root\.env.example" "$root\.env"
+    Write-Host '==> Created .env: put your real phone number in it (it is git-ignored).'
+}
+
 Write-Host "`nSetup complete. Build with:  powershell -ExecutionPolicy Bypass -File scripts\build.ps1"

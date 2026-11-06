@@ -465,3 +465,14 @@
   \end{minipage}%
 }
 
+
+% Render one entry in the experiences environment with a pre-formatted header
+% (used by the generated cv.tex, so empty location/title don't leave stray commas).
+% Usage: \cventry{<start>}{<header>}{<end>}{<body>}{<tag list>}
+\newcommand\cventry[5]{
+  \textbf{#1}    & \textbf{#2}                                    \\*
+  \textbf{#3}    & \begin{minipage}[t]{\rightcolumnlength}
+                     #4
+                   \end{minipage}                                 \\*
+                 & \footnotesize{\foreach \n in {#5}{\cvtag{\n}}} \\
+}
