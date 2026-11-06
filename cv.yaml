@@ -83,9 +83,8 @@ sections:
         location: Brisbane
         title: Senior Software Engineer
         summary: >-
-          Canva is a leading global visual communication platform, combining design, collaboration and AI-powered
-          creative tools for millions of users worldwide. Worked as a backend engineer in the template platform team,
-          owning content compliance, schema migrations, lifecycle automation and production reliability.
+          Canva is a leading global visual communication platform, worked as a backend engineer in the template
+          platform team.
         highlights:
           - >-
             Led the team's part of a template compliance project, designed event-driven workflows for rejected assets,
