@@ -1,0 +1,48 @@
+name: Build CV
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Same scripts as local setup, so CI also proves the one-line setup works.
+      - name: Cache TinyTeX
+        uses: actions/cache@v4
+        with:
+          path: ~/.TinyTeX
+          key: tinytex-${{ runner.os }}-${{ hashFiles('tex-packages.txt') }}-${{ github.run_id }}
+          restore-keys: tinytex-${{ runner.os }}-${{ hashFiles('tex-packages.txt') }}-
+
+      - name: Setup (TinyTeX + packages)
+        run: sh scripts/setup.sh
+
+      - name: Build PDF
+        run: sh scripts/build.sh
+
+      # Errors already fail the build (-halt-on-error); surface warnings as annotations.
+      - name: Report LaTeX warnings
+        run: grep -nE "Overfull|LaTeX Warning|Missing character" build/cv.log | sed 's/^/::warning::/' || true
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: build/cv.pdf
+          if-no-files-found: error
+
+      - name: Upload log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-log
+          path: build/cv.log

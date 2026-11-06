@@ -1,0 +1,27 @@
+# TeX Live packages needed to build the CV (installed by scripts/setup.*).
+# One per line. Packages already in TinyTeX are listed too, so the list is complete.
+latexmk
+luatex
+luaotfload
+fontspec
+babel-english
+babel-french
+luainputenc
+luatexbase
+xcolor
+geometry
+preprint
+fontawesome
+hyperref
+titlesec
+enumitem
+etoolbox
+pgf
+tcolorbox
+environ
+trimspaces
+fancyhdr
+url
+parskip
+tools
+tikzfill

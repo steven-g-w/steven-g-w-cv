@@ -1,0 +1,17 @@
+# Build output
+build/
+
+# LaTeX intermediates (in case something builds outside build/)
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.xdv
+*.toc
+src/*.pdf
+
+# Overleaf export used for the migration — never commit
+original/

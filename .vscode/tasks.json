@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CV: setup (install TinyTeX + packages)",
+      "type": "shell",
+      "windows": { "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup.ps1" },
+      "command": "sh scripts/setup.sh",
+      "problemMatcher": []
+    },
+    {
+      "label": "CV: build PDF",
+      "type": "shell",
+      "windows": { "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1" },
+      "command": "sh scripts/build.sh",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "CV: watch (rebuild on change)",
+      "type": "shell",
+      "windows": { "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1 -Watch" },
+      "command": "sh scripts/build.sh --watch",
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
