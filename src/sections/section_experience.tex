@@ -13,15 +13,18 @@
 %\renewcommand{\labelitemi}{$\bullet$}
 \begin{experiences}
     \experience 
-    {JUL 2022}   {Doordash}{Brisbane}{Software Engineer}
-    {DEC 2022} {
-                    Doordash is the leading food delivery company in US market, worked as part of the logistic team.
+    {JAN 2023}   {Canva}{Brisbane}{Senior Software Engineer}
+    {NOW} {
+                    Canva is a leading global visual communication platform, combining design, collaboration and AI-powered creative tools for millions of users worldwide. Worked as a backend engineer in the template platform team, owning content compliance, schema migrations, lifecycle automation and production reliability.
                     \begin{itemize}
-                        \item Designed and implemented induced cancellation apology credit feature for consumer growth, conducted experiment with A/B test and data experiment (still ongoing but shows strong statistic result already)
-                        \item Implemented legacy service migration in a smooth transition with percentage roll out 
+                        \item Led the team's part of a template compliance project, designed event-driven workflows for rejected assets, grace periods and template delisting; backfilled compliance status for \textbf{4M+ templates} and built tooling to fix \textbf{400K+ templates} in place, cutting manual republishing and review
+                        \item Designed and implemented a continuous schema migration pipeline across \textbf{50M+ contents}, with rate-controlled SQS processing, persistent migration status and version-aware checks to avoid redundant work and improve visibility and recovery
+                        \item Delivered customer-facing audit logging for brand templates, defined Protobuf/OpenAPI schemas and instrumented Java services to support enterprise governance
+                        \item Built automated template deletion and restoration workflows with retention-based purging across MySQL and S3, ran a phased deletion-metadata backfill over \textbf{1.25M templates} with safeguards for files still in use
+                        \item Extended template infrastructure for responsive documents, Whiteboard Sections, mockups, email and interactive content across schemas, validation, resource tracking and search to unblock product launches
                   \end{itemize}
                     }
-                    {Kotlin, Python, Typescript, React,AWS}
+                    {Java, MySQL, jOOQ, AWS RDS, AWS SQS, AWS S3, Protobuf, OpenAPI, ObsHub, Kibana}
     \emptySeparator
     \experience 
     {JUL 2022}   {Doordash}{Brisbane}{Software Engineer}

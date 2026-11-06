@@ -1,6 +1,6 @@
 # Steven Wang CV
 
-The CV for Steven Wang, written in LaTeX (LuaLaTeX, same as the original Overleaf project).
+The CV for Steven Wang, written in LaTeX
 Every push builds the PDF in GitHub Actions; download it from the run's **cv-pdf** artifact.
 
 ## Setup (once)
