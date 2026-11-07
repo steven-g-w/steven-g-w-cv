@@ -178,7 +178,7 @@ sections:
         organization: GIS People (Fish Identification)
         location: Brisbane
         title: Full Stack Developer
-        summary: Fish Identification project is a project.
+        summary: A hackathon project using machine learning to identify fish species for recreational fishing.
         highlights:
           - Machine Learning model training and prediction for fish species visual identificatio
           - >-
