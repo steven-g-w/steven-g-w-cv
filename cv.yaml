@@ -105,7 +105,7 @@ sections:
             interactive content across schemas, validation, resource tracking and search to unblock product launches
           - >-
             Applied **Claude Code** to backend implementation, codebase investigation and debugging; authored reusable
-            agent skills for Protobuf updates, service-container testing and observability queries to capture
+            agent skills for Protobuf updates and observability queries to capture
             service-specific knowledge for repeatable AI-assisted workflows
           - >-
             Designed and built a Slack-integrated alert-triage workflow with **Glean**, orchestrating specialized
