@@ -218,7 +218,7 @@ sections:
         end: AUG 2017
         organization: Bank of China Australia
         location: Brisbane
-        title: IT Support Developer
+        title: General Staff/IT Support
         highlights:
           - Provided Queensland-wide IT support and developed applications to assist daily banking operations
         tags: [C#, SQL, Windows Forms, PdfWriter, Python, Raspberry Pi]
@@ -227,7 +227,7 @@ sections:
         end: APR 2015
         organization: Umart Online
         location: Brisbane
-        title: Web Developer
+        title: IT Technician/Developer
         highlights:
           - Developed an online store website and warehouse management web applications
         tags: [PHP, HTML5, CSS3, JavaScript, Bootstrap 3]
@@ -270,7 +270,7 @@ sections:
         tags: [AutoCAD, Python, C#, C]
 
       - start: "2016"
-        end: NOW
+        end: "2022"
         organization: Queensland University of Technology
         location: Brisbane
         title: Bachelor of Computer Science
