@@ -60,7 +60,7 @@ sections:
           PyTorch
       - name: Architectures
         value: Microservices, Service Oriented Architecture (SOA), RESTful APIs
-      - name: Developer Tools & Platforms
+      - name: Dev Tools
         value: Jira, Confluence, GitHub, Azure DevOps (VSTS), Azure Repos, GitLab, Bitbucket, Postman
       - name: DevOps
         value: Azure Pipelines, Docker, Jenkins, Kubernetes, New Relic, Sumo Logic
