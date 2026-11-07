@@ -143,7 +143,8 @@ sections:
           - >-
             Spread operational knowledge across the team by mentoring engineers on data-migration workflows and
             designing incident-response exercises for on-call onboarding
-        tags: [Java, MySQL, jOOQ, AWS RDS, AWS SQS, AWS S3, Protobuf, OpenAPI, Kibana, Claude Code, Glean]
+        tags: [Java, MySQL, jOOQ, AWS (RDS/SQS/S3), Event-Driven Architecture, Distributed Systems, Protobuf, OpenAPI,
+               Claude Code, Glean]
 
       - start: JUL 2022
         end: DEC 2022
