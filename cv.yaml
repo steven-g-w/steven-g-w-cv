@@ -190,8 +190,9 @@ sections:
         location: Brisbane
         title: Full Stack Developer
         summary: >-
-          Vista is the core system for Aurizon nationwide train service management. It processes updates from
-          business units with different underlying logic, then serves consolidated data to users/consumers.
+          Vista is the core system for Aurizon nationwide train service management. It processes **~30K messages a
+          day** from 3 business regions, each with its own underlying logic, plus **~30K GPS updates a day**, then
+          serves consolidated data to users/consumers.
         highlights:
           - >-
             Led the redesign and rewrite of Vista as the lead developer, finishing the main part in **3 months**
