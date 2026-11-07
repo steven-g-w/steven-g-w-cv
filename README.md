@@ -35,7 +35,19 @@ powershell -ExecutionPolicy Bypass -File scripts\build.ps1
 sh scripts/build.sh
 ```
 
-Outputs `build/cv.pdf` and the web page in `build/site/`. Options: `-Watch` / `--watch` rebuilds whenever `cv.yaml` changes, `-NoPdf` / `--no-pdf` skips LaTeX, and `-Clean` / `--clean` wipes the output.
+Outputs `build/cv.pdf` and the web page in `build/site/`.
+
+Local preview with live reload (rebuilds on every save of `cv.yaml` and refreshes the browser):
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scriptsuild.ps1 -Serve
+```
+
+```bash
+sh scripts/build.sh --serve
+```
+
+Then open <http://localhost:8000>. Add `-NoPdf` / `--no-pdf` for faster rebuilds, or `-Port` / `--serve PORT` to change the port. Options: `-Watch` / `--watch` rebuilds whenever `cv.yaml` changes, `-NoPdf` / `--no-pdf` skips LaTeX, and `-Clean` / `--clean` wipes the output.
 
 ## Private details: `.env`
 

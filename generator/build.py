@@ -4,6 +4,7 @@ Usage (normally via scripts/build.ps1 or scripts/build.sh):
     python generator/build.py            # validate + PDF + site
     python generator/build.py --no-pdf   # validate + site only (no LaTeX needed)
     python generator/build.py --watch    # rebuild whenever cv.yaml, templates or the class change
+    python generator/build.py --serve    # watch + host the page at http://localhost:8000 with live reload
     python generator/build.py --clean    # remove build/ and generated files
 
 Outputs:
@@ -23,6 +24,7 @@ import re
 import shutil
 import subprocess
 import sys
+import threading
 import time
 from datetime import date
 from pathlib import Path
@@ -189,7 +191,11 @@ def watched_files() -> list[Path]:
     return files + list(TEMPLATES.glob("*"))
 
 
+_build_version = 0
+
+
 def watch(pdf: bool) -> None:
+    global _build_version
     def snapshot():
         return {f: f.stat().st_mtime for f in watched_files() if f.exists()}
 
@@ -201,9 +207,61 @@ def watch(pdf: bool) -> None:
             last = current
             try:
                 build(pdf)
+                _build_version += 1
             except SystemExit as err:  # keep watching after a bad edit
                 print(err, file=sys.stderr)
         time.sleep(1)
+
+
+_RELOAD_SNIPPET = b"""<script>
+(() => { let v = null;
+  setInterval(async () => {
+    try { const n = await (await fetch('/__version', {cache: 'no-store'})).text();
+          if (v !== null && n !== v) location.reload(); v = n; } catch (e) {}
+  }, 1000);
+})();
+</script>"""
+
+
+def serve(pdf: bool, port: int) -> None:
+    """Watch and rebuild, and host build/site with automatic browser reload after each rebuild."""
+    from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+
+    class Handler(SimpleHTTPRequestHandler):
+        def __init__(self, *a, **kw):
+            super().__init__(*a, directory=str(SITE), **kw)
+
+        def end_headers(self):
+            self.send_header("Cache-Control", "no-store")
+            super().end_headers()
+
+        def do_GET(self):
+            path = self.path.split("?")[0]
+            if path == "/__version":
+                return self._send(str(_build_version).encode(), "text/plain")
+            if path in ("/", "/index.html") and (SITE / "index.html").exists():
+                body = (SITE / "index.html").read_bytes().replace(b"</body>", _RELOAD_SNIPPET + b"</body>")
+                return self._send(body, "text/html; charset=utf-8")
+            super().do_GET()
+
+        def _send(self, body: bytes, ctype: str):
+            self.send_response(200)
+            self.send_header("Content-Type", ctype)
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
+        def log_message(self, *args):
+            pass
+
+    SITE.mkdir(parents=True, exist_ok=True)
+    server = ThreadingHTTPServer(("127.0.0.1", port), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    print(f"Serving http://localhost:{port}/ (auto-reloads after each rebuild)")
+    try:
+        watch(pdf)
+    except KeyboardInterrupt:
+        server.shutdown()
 
 
 def clean() -> None:
@@ -215,11 +273,15 @@ def clean() -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--watch", action="store_true", help="rebuild on changes")
+    parser.add_argument("--serve", nargs="?", const=8000, type=int, metavar="PORT",
+                        help="watch, rebuild and host the page locally with live reload (default port 8000)")
     parser.add_argument("--clean", action="store_true", help="remove build output")
     parser.add_argument("--no-pdf", action="store_true", help="skip LaTeX; only validate and render the site")
     args = parser.parse_args()
     if args.clean:
         clean()
+    elif args.serve:
+        serve(pdf=not args.no_pdf, port=args.serve)
     elif args.watch:
         watch(pdf=not args.no_pdf)
     else:

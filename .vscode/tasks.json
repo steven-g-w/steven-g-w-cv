@@ -23,6 +23,14 @@
       "command": "sh scripts/build.sh --watch",
       "isBackground": true,
       "problemMatcher": []
+    },
+    {
+      "label": "CV: serve (local web page with live reload)",
+      "type": "shell",
+      "windows": { "command": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1 -Serve" },
+      "command": "sh scripts/build.sh --serve",
+      "isBackground": true,
+      "problemMatcher": []
     }
   ]
 }
