@@ -73,40 +73,7 @@ sections:
         value: LaTeX, Photoshop, GIMP
 
   - type: experience
-    title: Education Background
-    icon: mortar-board
-    entries:
-      - start: "2013"
-        end: "2013"
-        organization: University of New South Wales
-        location: Sydney
-        title: Master of Engineering Science
-        highlights:
-          - "GPA: 6.1/7.0, average: 83/100"
-        tags: [AutoCAD, Python, C#, C]
-
-      - start: "2016"
-        end: "2022"
-        organization: Queensland University of Technology
-        location: Brisbane
-        title: Bachelor of Computer Science
-        highlights:
-          - 2 years of straight HDs (95% weighted average) while studying and working full time
-          - GPA 6.6/7; nominated 3 times as Peer Learning Facilitator
-        tags: [Java, C#, Python, C, .NET Core, SQL, R, Unix, HTML5, CSS3, JavaScript]
-
-      - start: "2006"
-        end: "2010"
-        organization: Tsinghua University
-        location: Beijing
-        title: Bachelor of Mechanical Engineering
-        highlights:
-          - Student social work award at Student Union Design Center
-        tags: [AutoCAD, SketchUp, Pro/ENGINEER, SolidWorks, CATIA, Photoshop, C, Visual Basic, Assembly Language]
-
-  - type: experience
     title: Professional Experience
-    new_page: true
     icon: suitcase
     entries:
       - start: JAN 2023
@@ -295,6 +262,38 @@ sections:
           - Worked alongside senior engineers to draft engineering drawings for train-use brake discs
           - Assisted on-site work on semi-automatic assembly lines of trains and armored vehicles
         tags: [AutoCAD]
+
+  - type: experience
+    title: Education Background
+    icon: mortar-board
+    entries:
+      - start: "2013"
+        end: "2013"
+        organization: University of New South Wales
+        location: Sydney
+        title: Master of Engineering Science
+        highlights:
+          - "GPA: 6.1/7.0, average: 83/100"
+        tags: [AutoCAD, Python, C#, C]
+
+      - start: "2016"
+        end: "2022"
+        organization: Queensland University of Technology
+        location: Brisbane
+        title: Bachelor of Computer Science
+        highlights:
+          - 2 years of straight HDs (95% weighted average) while studying and working full time
+          - GPA 6.6/7; nominated 3 times as Peer Learning Facilitator
+        tags: [Java, C#, Python, C, .NET Core, SQL, R, Unix, HTML5, CSS3, JavaScript]
+
+      - start: "2006"
+        end: "2010"
+        organization: Tsinghua University
+        location: Beijing
+        title: Bachelor of Mechanical Engineering
+        highlights:
+          - Student social work award at Student Union Design Center
+        tags: [AutoCAD, SketchUp, Pro/ENGINEER, SolidWorks, CATIA, Photoshop, C, Visual Basic, Assembly Language]
 
   - type: list
     title: Certifications
