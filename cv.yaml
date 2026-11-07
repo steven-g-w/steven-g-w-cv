@@ -119,29 +119,29 @@ sections:
           platform team.
         highlights:
           - >-
-            Kept **50M+ contents** on the latest schema with a continuous migration pipeline I designed and owned,
-            using rate-controlled SQS processing, persistent migration status and version-aware checks to avoid
+            Kept **50M+ content records** on the latest schema with a continuous migration pipeline I designed and
+            owned, using rate-controlled SQS processing, persistent migration status and version-aware checks to avoid
             redundant work and simplify recovery
           - >-
             Brought **4M+ templates** under automated compliance checks and fixed **400K+ templates** in place, cutting
-            manual republishing and review; led the team's delivery, designing event-driven workflows for rejected
-            assets, grace periods and template delisting
+            manual republishing and review; led the team's delivery, designing event-driven workflows for flagged
+            content, remediation windows and takedowns
           - >-
-            Cut template RPC latency **3x** (60ms to 20ms) and RDS CPU utilization by **35%** (20% to 13%) by
-            designing in-memory caching for template metadata definitions
+            Cut service latency **3x** (60ms to 20ms) and database CPU utilization by **35%** (20% to 13%) by
+            designing in-memory caching for frequently read metadata
           - >-
             Recovered **12.5M events** after a large-scale event-processing incident by leading the recovery and
             building replay tooling, then added queue-retention safeguards to prevent further message loss
           - >-
-            Owned the full lifecycle of brand-owned templates, from soft deletion and restoration to permanent deletion
-            and retention expiry, with coordinated MySQL and S3 cleanup and a deletion-metadata backfill over
-            **1.25M templates**; decoupled template ownership from individual users
+            Owned the full lifecycle of organization-owned (multi-tenant) content, from soft deletion and restoration
+            to permanent deletion and retention expiry, with coordinated MySQL and S3 cleanup and a backfill over
+            **1.25M templates**; decoupled ownership from individual users
           - >-
             Sped up implementation, investigation and debugging with **Claude Code** and reusable agent skills;
             designed a Slack-integrated alert-triage workflow with **Glean** that orchestrates sub-agents across logs,
             metrics, database state and docs to brief on-call engineers
           - >-
-            Spread operational knowledge across the team by mentoring engineers on schema-migration workflows and
+            Spread operational knowledge across the team by mentoring engineers on data-migration workflows and
             designing incident-response exercises for on-call onboarding
         tags: [Java, MySQL, jOOQ, AWS RDS, AWS SQS, AWS S3, Protobuf, OpenAPI, Kibana, Claude Code, Glean]
 
