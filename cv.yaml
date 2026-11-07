@@ -103,7 +103,15 @@ sections:
           - >-
             Extended template infrastructure for responsive documents, Whiteboard Sections, mockups, email and
             interactive content across schemas, validation, resource tracking and search to unblock product launches
-        tags: [Java, MySQL, jOOQ, AWS RDS, AWS SQS, AWS S3, Protobuf, OpenAPI, ObsHub, Kibana]
+          - >-
+            Applied **Claude Code** to backend implementation, codebase investigation and debugging; authored reusable
+            agent skills for Protobuf updates, service-container testing and observability queries to capture
+            service-specific knowledge for repeatable AI-assisted workflows
+          - >-
+            Designed and built a Slack-integrated alert-triage workflow with **Glean**, orchestrating specialized
+            sub-agents to investigate logs, metrics, database state, docs and Slack history, then synthesize diagnostic
+            summaries for on-call engineers
+        tags: [Java, MySQL, jOOQ, AWS RDS, AWS SQS, AWS S3, Protobuf, OpenAPI, ObsHub, Kibana, Claude Code, Glean]
 
       - start: JUL 2022
         end: DEC 2022
