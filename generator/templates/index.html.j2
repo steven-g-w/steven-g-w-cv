@@ -137,6 +137,7 @@
       .page { margin: 0; padding: 0; box-shadow: none; max-width: none; }
       .actions, footer { display: none; }
       .entry { break-inside: avoid; }
+      .new-page { break-before: page; }
     }
   </style>
 </head>
@@ -166,7 +167,7 @@
     <p class="summary">{{ section.text|html }}</p>
 
     {% elif section.type == 'skills' %}
-    <section>
+    <section{% if section.new_page %} class="new-page"{% endif %}>
       <h2><i class="fa fa-{{ section.icon or 'tasks' }}" aria-hidden="true"></i>{{ section.title }}</h2>
       <dl class="skills">
         {% for item in section['items'] %}
@@ -177,7 +178,7 @@
     </section>
 
     {% elif section.type == 'experience' %}
-    <section>
+    <section{% if section.new_page %} class="new-page"{% endif %}>
       <h2><i class="fa fa-{{ section.icon or 'suitcase' }}" aria-hidden="true"></i>{{ section.title }}</h2>
       {% for e in section.entries %}
       <article class="entry">
@@ -203,7 +204,7 @@
     </section>
 
     {% elif section.type == 'list' %}
-    <section>
+    <section{% if section.new_page %} class="new-page"{% endif %}>
       <h2><i class="fa fa-{{ section.icon or 'certificate' }}" aria-hidden="true"></i>{{ section.title }}</h2>
       <dl class="list">
         {% for item in section['items'] %}

@@ -34,6 +34,9 @@
 	{\thepage}
 
 ((* for section in cv.sections *))
+((* if section.new_page *))
+\newpage
+((* endif *))
 ((* if section.type == 'summary' *))
 \par{((( section.text|latex )))}
 

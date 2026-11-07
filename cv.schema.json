@@ -78,6 +78,7 @@
               "type": { "const": "skills" },
               "title": { "type": "string" },
               "icon": { "$ref": "#/$defs/icon" },
+              "new_page": { "type": "boolean", "description": "Start this section on a new page in the PDF (and when printing the web page)." },
               "hidden": { "$ref": "#/$defs/hidden" },
               "items": {
                 "type": "array",
@@ -101,6 +102,7 @@
               "type": { "const": "experience" },
               "title": { "type": "string" },
               "icon": { "$ref": "#/$defs/icon" },
+              "new_page": { "type": "boolean", "description": "Start this section on a new page in the PDF (and when printing the web page)." },
               "hidden": { "$ref": "#/$defs/hidden" },
               "entries": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
             }
@@ -112,6 +114,7 @@
               "type": { "const": "list" },
               "title": { "type": "string" },
               "icon": { "$ref": "#/$defs/icon" },
+              "new_page": { "type": "boolean", "description": "Start this section on a new page in the PDF (and when printing the web page)." },
               "hidden": { "$ref": "#/$defs/hidden" },
               "items": {
                 "type": "array",
