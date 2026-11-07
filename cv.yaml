@@ -98,14 +98,25 @@ sections:
             Delivered customer-facing audit logging for brand templates, defined Protobuf/OpenAPI schemas and
             instrumented Java services to support enterprise governance
           - >-
-            Built automated template deletion and restoration workflows with retention-based purging across MySQL and
-            S3, ran a phased deletion-metadata backfill over **1.25M templates** with safeguards for files still in use
+            Delivered backend support and lifecycle management for brand-owned templates, decoupling ownership from
+            individual users; built soft deletion, restoration, permanent deletion and retention expiry with
+            coordinated cleanup across MySQL and S3, and backfilled deletion metadata for **1.25M templates**
           - >-
-            Extended template infrastructure for responsive documents, Whiteboard Sections, mockups, email and
-            interactive content across schemas, validation, resource tracking and search to unblock product launches
+            Implemented in-memory caching for template metadata definitions, reducing RPC latency from **60ms to 20ms**
+            and RDS CPU utilization from **20% to 13%**
+          - >-
+            Led production recovery for a large-scale event-processing failure, built recovery tooling to replay
+            **12.5M annotation events** and added queue-retention safeguards to prevent further message loss
+          - >-
+            Contributed to an incident-free migration of template content from relational storage to S3, updating
+            retrieval paths and coordinating staged feature-flag rollouts
+          - >-
+            Delivered the template platform integration for **Canva Code 2.0** and extended template infrastructure
+            for responsive documents, Whiteboard Sections, mockups, email and interactive content across schemas,
+            publishing, previews and search to unblock product launches
           - >-
             Applied **Claude Code** to backend implementation, codebase investigation and debugging; authored reusable
-            agent skills for Protobuf updates and observability queries to capture
+            agent skills for Protobuf updates, observability queries and other BAU tasks to capture
             service-specific knowledge for repeatable AI-assisted workflows
           - >-
             Designed and built a Slack-integrated alert-triage workflow with **Glean**, orchestrating specialized
