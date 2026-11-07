@@ -35,23 +35,23 @@ sections:
       - name: Front End
         hidden: true
         value: >-
-          **Vue.js** 2, **Angular** 6/7/8, **TypeScript** 3.x/4.x, **JavaScript** ES6-11, JQuery 3.x, RxJS 6, Node.js,
-          AngularJS, React, JSX, Moment.js, Luxon, Jasmin, Karma, Protractor, TypeMoq, html-dnd, npm, yarn, Webpack,
+          **Vue.js** 2, **Angular** 6/7/8, **TypeScript** 3.x/4.x, **JavaScript** ES6-11, jQuery 3.x, RxJS 6, Node.js,
+          AngularJS, React, JSX, Moment.js, Luxon, Jasmine, Karma, Protractor, TypeMoq, html-dnd, npm, yarn, Webpack,
           Gulp, Babel, TSLint, ESLint, Popper.js, Select2, Malihu Scrollbar, Ion.RangeSlider, noUiSlider, HTML5, CSS3,
           SASS/LESS, Bootstrap 3/4, Angular Powered Bootstrap 4/5, React Bootstrap, Material Design Icons, Font Awesome,
           Responsive Design
       - name: Back End
         value: >-
-          **JAVA**, **jOOQ**, **Node.js Express**, **NestJS** 8, **Sequelize** 4/5/6, **C#**, **.NET Core** 1/2/3/5,
+          **Java**, **jOOQ**, **Node.js Express**, **NestJS** 8, **Sequelize** 4/5/6, **C#**, **.NET Core** 1/2/3/5,
           **Python** 2/3, **Entity Framework Core** 1/2/5, Kotlin, C, JWT
       - name: Front End
         value: >-
-          **Angular** 1/6/7/8, **Vue.js** 2, **TypeScript** 3.x/4.x, **JavaScript** ES6+, JQuery 3.x, RxJS 6, React
+          **Angular** 1/6/7/8, **Vue.js** 2, **TypeScript** 3.x/4.x, **JavaScript** ES6+, jQuery 3.x, RxJS 6, React
       - name: GIS
-        value: Mapbox GL JS, Leaflet, Turf, TileJSON, GeoJSON, GeoJSON.Net, Tippecanoe, GDAL, WMTS
+        value: Mapbox GL JS, Leaflet, Turf, TileJSON, GeoJSON, GeoJSON.NET, Tippecanoe, GDAL, WMTS
       - name: Cloud Services
         value: |-
-          AWS S3/SQS/RDS, Azure Service Bus(Queue/Topic), Storage (Blob/Table/Queue), App Services, Active Directory
+          AWS S3/SQS/RDS, Azure Service Bus (Queue/Topic), Storage (Blob/Table/Queue), App Services, Active Directory,
           Google App Engine, Cloud Storage, Compute Engine, Cloudflare
       - name: Database
         value: MySQL 5.7/8.0, Microsoft SQL Server 2016/2017/2019, Azure Cosmos DB, SQLite, Oracle DB
@@ -61,15 +61,15 @@ sections:
           PyTorch
       - name: Architectures
         value: Microservices, Service Oriented Architecture (SOA), RESTful APIs
-      - name: Develops Tools & Platforms
-        value: Jira, Confluence, GitHub, Azure DevOps (VSTS), Azure Repos, GitLab, BitBucket, Postman
+      - name: Developer Tools & Platforms
+        value: Jira, Confluence, GitHub, Azure DevOps (VSTS), Azure Repos, GitLab, Bitbucket, Postman
       - name: DevOps
-        value: Azure Pipeline, Docker, Jenkins, Kubernetes, New Relic, Sumo Logic
+        value: Azure Pipelines, Docker, Jenkins, Kubernetes, New Relic, Sumo Logic
       - name: Methodologies
-        value: Agile, Scrum, Kanban, TDD, BDD, OOP, A/B Test
+        value: Agile, Scrum, Kanban, TDD, BDD, OOP, A/B Testing
       - name: Engineering
         hidden: true
-        value: AutoCAD, Solid Works, SketchUp, Pro/ENGINEER
+        value: AutoCAD, SolidWorks, SketchUp, Pro/ENGINEER
       - name: Design
         value: LaTeX, Photoshop, GIMP
 
@@ -83,7 +83,7 @@ sections:
         location: Brisbane
         title: Senior Software Engineer
         summary: >-
-          Canva is a leading global visual communication platform, worked as a backend engineer in the template
+          Canva is a leading global visual communication platform; worked as a backend engineer in the template
           platform team.
         highlights:
           - >-
@@ -107,16 +107,16 @@ sections:
 
       - start: JUL 2022
         end: DEC 2022
-        organization: Doordash
+        organization: DoorDash
         location: Brisbane
         title: Software Engineer
-        summary: Doordash is the leading food delivery company in US market, worked as part of the logistic team.
+        summary: DoorDash is the leading food delivery company in the US market; worked as part of the logistics team.
         highlights:
           - >-
-            Designed and implemented induced cancellation apology credit feature for consumer growth, conducted
-            experiment with A/B test and data experiment (still ongoing but shows strong statistic result already)
-          - Implemented legacy service migration in a smooth transition with percentage roll out
-        tags: [Kotlin, Python, Typescript, React, AWS]
+            Designed and implemented an induced-cancellation apology credit feature for consumer growth, validated
+            through A/B testing with strong, statistically significant early results
+          - Implemented legacy service migration with a smooth, percentage-based rollout
+        tags: [Kotlin, Python, TypeScript, React, AWS]
 
       - start: NOV 2019
         end: JUL 2022
@@ -128,20 +128,20 @@ sections:
           **the only full-time developer**.
         highlights:
           - >-
-            Led multiple projects/microservices' developments with external contractors and third parties to
+            Led development of multiple projects/microservices with external contractors and third parties to
             architect/design/develop both front-end and back-end applications
           - >-
-            Provided coaching, code guidance, technical support and domain knowledge share for developers by code
-            reviews, Confluence/Github technical documentation and personal in-company video channel
+            Provided coaching, code guidance, technical support and domain knowledge sharing for developers through code
+            reviews, Confluence/GitHub technical documentation and an internal video channel
           - >-
             Built POCs to conduct experiments for new feature development, greatly uplifted overall developer
-            confidence and reduced developing effort
+            confidence and reduced development effort
           - >-
-            Built/maintained boilerplate code templates, internal modules/frameworks, testing kits, lint rules etc to
+            Built/maintained boilerplate code templates, internal modules/frameworks, testing kits, lint rules, etc. to
             ensure both the ease of development and the general code quality across all Aurizon projects
           - Built machine learning models for train service data monitoring/analysis/clustering
           - Worked proactively under minimal supervision
-        tags: [Microservices, Vue.js, Node.js, Express, NestJS 8, .Net Core 3/5, Entity Framework Core 5,
+        tags: [Microservices, Vue.js, Node.js, Express, NestJS 8, .NET Core 3/5, Entity Framework Core 5,
                Sequelize 4/5/6, Mapbox GL JS, TypeScript, C#, Swagger, MSSQL, OpenAPI 3, Azure Service Bus, Sinon.JS,
                Chai.js, Mocha, ESLint, Docker, Kubernetes, Pandas, Scikit-learn, Python, Jenkins, New Relic,
                Sumo Logic, Jira, Confluence]
@@ -152,23 +152,23 @@ sections:
         location: Brisbane
         title: Full Stack Developer
         summary: >-
-          Vista is the core system for Aurizon train services national wide management. It processes updates from
+          Vista is the core system for Aurizon nationwide train service management. It processes updates from
           business units with different underlying logic, then serves consolidated data to users/consumers.
         highlights:
           - Led and implemented system-level refactor/redesign/rewrite of Vista as the lead developer
-          - Reduced upstream message processing time by 98%, from typically per message 60s-100s to 1-2s
+          - Reduced upstream message processing time by 98%, typically from 60-100s per message to 1-2s
           - >-
-            Reduced upstream message processing error by 90% and added meaningful error content and codes for further
+            Reduced upstream message processing errors by 90% and added meaningful error content and codes for further
             business investigation
-          - Reduced downstream query response time by 99%, from typically per query 40s-60s to 500ms-800ms
-          - Reduced unnecessary HTTP traffics from external consumers and microservices within cluster by 80%
+          - Reduced downstream query response time by 99%, typically from 40-60s per query to 500-800ms
+          - Reduced unnecessary HTTP traffic from external consumers and microservices within the cluster by 80%
           - >-
-            Reduced developing effort by creating reusable RESTful APIs and client npm package, the main part of the
-            project was finished within 3 months while the original project was developed for about 2 years
-          - Implemented optimistic lock to enable concurrent updates without entering race condition
+            Reduced development effort by creating reusable RESTful APIs and a client npm package; the main part of the
+            project was finished within 3 months, versus about 2 years for the original
+          - Implemented optimistic locking to enable concurrent updates without race conditions
           - >-
             Converted all core processors and APIs into highly scalable microservices by redesigning the message
-            processing pipelines and ensuring the atomicity for each message processing operation
+            processing pipelines and ensuring atomicity of each message processing operation
         tags: [Microservices, SOA, Node.js, Express, NestJS 8, Sequelize 5/6, TypeScript, Swagger, MSSQL, OpenAPI 3,
                Azure Service Bus Topic, Sinon.JS, Chai.js, Mocha, ESLint, Docker, Kubernetes, Jenkins, Jira,
                Confluence]
@@ -180,16 +180,16 @@ sections:
         title: Full Stack Developer
         summary: |-
           Gruntify is a multi-platform location-based reporting and field service workflow automation system.
-          Worked as 1 of 3 major full stack developers in a team of 10.
+          Worked as 1 of 3 core full stack developers in a team of 10.
         highlights:
-          - Re-designed and developed existing Gruntify API by turning it into a highly scalable SaaS offering
-          - Developed Gruntify V4 web application and configured to support 100+ WMTS from 16+ map providers
-          - Implemented RESTful API and background processor for report generation and data export requests
+          - Redesigned the existing Gruntify API, turning it into a highly scalable SaaS offering
+          - Developed Gruntify V4 web application configured to support 100+ WMTS from 16+ map providers
+          - Implemented a RESTful API and background processor for report generation and data export requests
           - Implemented CI/CD and followed TDD approach for all Gruntify BE and FE projects
           - Built a hackathon ML fish species identification model (TensorFlow, YOLO), later integrated into Gruntify V4
         tags: [SOA, RESTful API, .NET Core 2.2, Cosmos DB, Angular 6/7/8, TypeScript 3.x, RxJS, Hangfire,
                TSLint, SASS, Mapbox GL JS, Azure Storage/Service Bus, Auth0, JWT, Stripe, SendGrid, PubNub,
-               GeoJSON.Net, JSON.Net, FluentAssertions, NSubstitute, MSTest, WMTS, Git, Azure DevOps, Agile, Kanban]
+               GeoJSON.NET, JSON.NET, FluentAssertions, NSubstitute, MSTest, WMTS, Git, Azure DevOps, Agile, Kanban]
 
       - start: DEC 2018
         end: OCT 2019
@@ -199,19 +199,19 @@ sections:
         summary: Gruntimaps is an open source Web Map Tile Server (WMTS) with customized styles/fonts/sprites.
         highlights:
           - Designed and developed the Gruntimaps project from a simple prototype into a scalable RESTful API
-          - Integrated Azure Storage/Service Bus along with other cloud infrastructure providers as GCP/AWS
-        tags: [RESTful API, .Net Core, SQLite, JSON.Net, GeoJSON.Net, Tippecanoe, GDAL, Azure, GCP, AWS, Git]
+          - Integrated Azure Storage/Service Bus along with other cloud infrastructure providers such as GCP/AWS
+        tags: [RESTful API, .NET Core, SQLite, JSON.NET, GeoJSON.NET, Tippecanoe, GDAL, Azure, GCP, AWS, Git]
 
       - start: AUG 2017
         end: MAY 2018
         organization: GIS People (Open Declare)
         location: Brisbane
         title: Graduate Developer
-        summary: Open declare is an electronic disclosure system for political donations.
+        summary: Open Declare is an electronic disclosure system for political donations.
         highlights:
           - Led the development of 2 Open Declare projects concurrently for 2 state government agencies
           # - Electoral Commission Queensland (ECQ) and Electoral Commission South Australia (ECSA)
-        tags: [.Net Core MVC, Microsoft SQL Server, Entity Framework Core, HTML5, CSS3, JavaScript ES6/7, JQuery,
+        tags: [.NET Core MVC, Microsoft SQL Server, Entity Framework Core, HTML5, CSS3, JavaScript ES6/7, jQuery,
                Leaflet, SOAP, WCF, Azure DevOps, Agile, Scrum, Kanban]
 
       - start: MAY 2015
@@ -220,8 +220,8 @@ sections:
         location: Brisbane
         title: IT Support Developer
         highlights:
-          - Provided Queensland wide IT support and developed applications to assist daily banking operation
-        tags: [C#, SQL, Windows Form, PdfWriter, Python, Raspberry Pi]
+          - Provided Queensland-wide IT support and developed applications to assist daily banking operations
+        tags: [C#, SQL, Windows Forms, PdfWriter, Python, Raspberry Pi]
 
       - start: DEC 2013
         end: APR 2015
@@ -229,7 +229,7 @@ sections:
         location: Brisbane
         title: Web Developer
         highlights:
-          - Developed online store website and warehouse management web applications
+          - Developed an online store website and warehouse management web applications
         tags: [PHP, HTML5, CSS3, JavaScript, Bootstrap 3]
 
       - start: AUG 2010
@@ -243,7 +243,7 @@ sections:
           # - Provided technical support for Quality Assurance (QA) and manufacturing process optimization
           # - Assisted power plant construction and parts manufacturing on site with international teams
           # - "“2010 Best New Employee” award winner (10 out of 200+ new employees)"
-        tags: [AutoCAD, Pro/Engineer, Solid Works, SketchUp]
+        tags: [AutoCAD, Pro/ENGINEER, SolidWorks, SketchUp]
 
       - start: JUL 2009
         end: AUG 2009
@@ -262,11 +262,11 @@ sections:
     entries:
       - start: "2013"
         end: "2013"
-        organization: University for New South Wales
+        organization: University of New South Wales
         location: Sydney
         title: Master of Engineering Science
         highlights:
-          - "GPA: 6.1/7.0 AVG: 83/100"
+          - "GPA: 6.1/7.0, average: 83/100"
         tags: [AutoCAD, Python, C#, C]
 
       - start: "2016"
@@ -275,9 +275,9 @@ sections:
         location: Brisbane
         title: Bachelor of Computer Science
         highlights:
-          - 2-year full HD (95% weighted avg.) while full time studying and full time working
-          - GPA 6.6/7, 3 times nomination of Peer Learning Facilitator
-        tags: [JAVA, C#, Python, C, .Net Core, SQL, R, Unix, HTML5, CSS3, JavaScript]
+          - 2 years of straight HDs (95% weighted average) while studying and working full time
+          - GPA 6.6/7; nominated 3 times as Peer Learning Facilitator
+        tags: [Java, C#, Python, C, .NET Core, SQL, R, Unix, HTML5, CSS3, JavaScript]
 
       - start: "2006"
         end: "2010"
@@ -286,7 +286,7 @@ sections:
         title: Bachelor of Mechanical Engineering
         highlights:
           - Student social work award at Student Union Design Center
-        tags: [AutoCAD, SketchUp, Pro/Engineer, Solid Works, CATIA, Photoshop, C, Visual Basic, Assembly Language]
+        tags: [AutoCAD, SketchUp, Pro/ENGINEER, SolidWorks, CATIA, Photoshop, C, Visual Basic, Assembly Language]
 
   - type: list
     title: Certifications
@@ -312,10 +312,10 @@ sections:
         organization: Bank Account Wizard
         url: http://boc-wizard.azurewebsites.net/
         summary: >-
-          Bank Account Wizard is a project to transform bank account opening process into a dynamic online form system
+          Bank Account Wizard is a project to transform the bank account opening process into a dynamic online form system
         highlights:
           - Developed the front-end project with Angular 7/8, Select2, Moment.js, npm, yarn, Webpack, Gulp, Babel, TSLint
-          - Developed the back-end RESTful API with .Net Core 2, Azure Blob Storage, JWT Token and Microsoft SQL Server
-          - Setup CI/CD Pipeline with Azure Pipelines and npm, webpack and Gulp
-        tags: [Angular 7/8, Select2, Moment.js, npm, yarn, Webpack, Gulp, Babel, TSLint, .Net Core 2,
+          - Developed the back-end RESTful API with .NET Core 2, Azure Blob Storage, JWT Token and Microsoft SQL Server
+          - Set up a CI/CD pipeline with Azure Pipelines and npm, Webpack and Gulp
+        tags: [Angular 7/8, Select2, Moment.js, npm, yarn, Webpack, Gulp, Babel, TSLint, .NET Core 2,
                Azure Blob Storage, JWT, SQL]
