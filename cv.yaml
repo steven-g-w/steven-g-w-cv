@@ -175,21 +175,6 @@ sections:
 
       - start: JUN 2018
         end: OCT 2019
-        organization: GIS People (Fish Identification)
-        location: Brisbane
-        title: Full Stack Developer
-        summary: A hackathon project using machine learning to identify fish species for recreational fishing.
-        highlights:
-          - Machine Learning model training and prediction for fish species visual identificatio
-          - >-
-            Experimented Machine Learning with Tensorflow, YOLO, Google App Engine, Google Compute Engine and Google ML
-            Engine for fish species visual identification
-        tags: &gruntify-tags [SOA, RESTful API, .NET Core 2.2, Cosmos DB, Angular 6/7/8, TypeScript 3.x, RxJS, Hangfire,
-               TSLint, SASS, Mapbox GL JS, Azure Storage/Service Bus, Auth0, JWT, Stripe, SendGrid, PubNub,
-               GeoJSON.Net, JSON.Net, FluentAssertions, NSubstitute, MSTest, WMTS, Git, Azure DevOps, Agile, Kanban]
-
-      - start: JUN 2018
-        end: OCT 2019
         organization: GIS People (Gruntify V4)
         location: Brisbane
         title: Full Stack Developer
@@ -201,7 +186,10 @@ sections:
           - Developed Gruntify V4 web application and configured to support 100+ WMTS from 16+ map providers
           - Implemented RESTful API and background processor for report generation and data export requests
           - Implemented CI/CD and followed TDD approach for all Gruntify BE and FE projects
-        tags: *gruntify-tags
+          - Built a hackathon ML fish species identification model (TensorFlow, YOLO), later integrated into Gruntify V4
+        tags: [SOA, RESTful API, .NET Core 2.2, Cosmos DB, Angular 6/7/8, TypeScript 3.x, RxJS, Hangfire,
+               TSLint, SASS, Mapbox GL JS, Azure Storage/Service Bus, Auth0, JWT, Stripe, SendGrid, PubNub,
+               GeoJSON.Net, JSON.Net, FluentAssertions, NSubstitute, MSTest, WMTS, Git, Azure DevOps, Agile, Kanban]
 
       - start: DEC 2018
         end: OCT 2019
