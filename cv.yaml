@@ -105,7 +105,7 @@ sections:
             Implemented in-memory caching for template metadata definitions, reducing RPC latency from **60ms to 20ms**
             and RDS CPU utilization from **20% to 13%**
           - >-
-            Led production recovery for a large-scale event-processing failure, built recovery tooling to replay
+            Led recovery from a large-scale event-processing incident, built recovery tooling to replay
             **12.5M events** and added queue-retention safeguards to prevent further message loss
           - >-
             Contributed to an incident-free migration of template content from relational storage to S3, updating
@@ -167,14 +167,14 @@ sections:
 
       - start: MAY 2021
         end: JAN 2022
-        organization: Aurizon (Core system refactor)
+        organization: Aurizon (Vista system-level refactor)
         location: Brisbane
         title: Full Stack Developer
         summary: >-
-          The core system for Aurizon's nationwide train service management. It processes updates from
+          Vista is the core system for Aurizon nationwide train service management. It processes updates from
           business units with different underlying logic, then serves consolidated data to users/consumers.
         highlights:
-          - Led and implemented system-level refactor/redesign/rewrite of the core system as the lead developer
+          - Led and implemented system-level refactor/redesign/rewrite of Vista as the lead developer
           - Reduced upstream message processing time by 98%, typically from 60-100s per message to 1-2s
           - >-
             Reduced upstream message processing errors by 90% and added meaningful error content and codes for further
@@ -329,7 +329,6 @@ sections:
     entries:
       - start: "2019"
         organization: Bank Account Wizard
-        url: http://boc-wizard.azurewebsites.net/
         summary: >-
           Bank Account Wizard is a project to transform the bank account opening process into a dynamic online form system
         highlights:
