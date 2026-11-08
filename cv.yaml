@@ -171,46 +171,25 @@ sections:
         tags: [Microservices, Node.js, NestJS, TypeScript, Sequelize, MSSQL, Azure Service Bus, OpenAPI, Docker,
                Kubernetes, Jenkins]
 
-      - start: JUN 2018
-        end: OCT 2019
-        organization: GIS People (Gruntify V4)
-        location: Brisbane
-        title: Full Stack Developer
-        summary: |-
-          Gruntify is a multi-platform location-based reporting and field service workflow automation system.
-          Worked as 1 of 3 core full stack developers in a team of 10.
-        highlights:
-          - Redesigned the existing Gruntify API, turning it into a highly scalable SaaS offering
-          - Developed Gruntify V4 web application configured to support 100+ WMTS from 16+ map providers
-          - Implemented a RESTful API and background processor for report generation and data export requests
-          - Implemented CI/CD and followed TDD approach for all Gruntify BE and FE projects
-          - Built a hackathon ML fish species identification model (TensorFlow, YOLO), later integrated into Gruntify V4
-        tags: [SOA, RESTful API, .NET Core 2.2, Cosmos DB, Angular 6/7/8, TypeScript 3.x, RxJS, Hangfire,
-               TSLint, SASS, Mapbox GL JS, Azure Storage/Service Bus, Auth0, JWT, Stripe, SendGrid, PubNub,
-               GeoJSON.NET, JSON.NET, FluentAssertions, NSubstitute, MSTest, WMTS, Git, Azure DevOps, Agile, Kanban]
-
-      - start: DEC 2018
-        end: OCT 2019
-        organization: GIS People (Gruntimaps)
-        location: Brisbane
-        title: Full Stack Developer
-        summary: Gruntimaps is an open source Web Map Tile Server (WMTS) with customized styles/fonts/sprites.
-        highlights:
-          - Designed and developed the Gruntimaps project from a simple prototype into a scalable RESTful API
-          - Integrated Azure Storage/Service Bus along with other cloud infrastructure providers such as GCP/AWS
-        tags: [RESTful API, .NET Core, SQLite, JSON.NET, GeoJSON.NET, Tippecanoe, GDAL, Azure, GCP, AWS, Git]
-
       - start: AUG 2017
-        end: MAY 2018
-        organization: GIS People (Open Declare)
+        end: OCT 2019
+        organization: GIS People
         location: Brisbane
         title: Full Stack Developer
-        summary: Open Declare is an electronic disclosure system for political donations.
+        summary: >-
+          GIS People builds location-based software, including Gruntify (field service workflow automation),
+          Gruntimaps (open source map tile server) and Open Declare (political donation disclosure).
         highlights:
+          - >-
+            Redesigned the Gruntify API into a highly scalable SaaS offering and developed the Gruntify V4 web
+            application supporting 100+ WMTS from 16+ map providers, as 1 of 3 core full stack developers in a team of 10
+          - Implemented a RESTful API and background processor for report generation and data export requests
+          - >-
+            Designed and developed Gruntimaps from a simple prototype into a scalable RESTful API, integrating Azure,
+            GCP and AWS infrastructure
           - Led the development of 2 Open Declare projects concurrently for 2 state government agencies
-          # - Electoral Commission Queensland (ECQ) and Electoral Commission South Australia (ECSA)
-        tags: [.NET Core MVC, Microsoft SQL Server, Entity Framework Core, HTML5, CSS3, JavaScript ES6/7, jQuery,
-               Leaflet, SOAP, WCF, Azure DevOps, Agile, Scrum, Kanban]
+          - Implemented CI/CD and followed a TDD approach for all back-end and front-end projects
+        tags: [.NET Core, C#, Angular, TypeScript, Cosmos DB, SQL Server, Azure, Mapbox GL JS, WMTS, GDAL, Azure DevOps]
 
       - start: MAY 2015
         end: AUG 2017
