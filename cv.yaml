@@ -33,45 +33,33 @@ sections:
     title: Skills
     icon: tasks
     items:
+      - name: Languages
+        value: "**Java**, **TypeScript**, **C#**, **Python**, JavaScript, Kotlin, SQL"
+      - name: Back End
+        value: "**jOOQ**, **Node.js**, **NestJS**, **.NET Core**, Express, Entity Framework Core, Sequelize"
       - name: Front End
+        value: "**Vue.js**, **Angular**, React, RxJS, jQuery"
+      - name: Front End (detailed)
         hidden: true
         value: >-
-          **Vue.js** 2, **Angular** 6/7/8, **TypeScript** 3.x/4.x, **JavaScript** ES6-11, jQuery 3.x, RxJS 6, Node.js,
-          AngularJS, React, JSX, Moment.js, Luxon, Jasmine, Karma, Protractor, TypeMoq, html-dnd, npm, yarn, Webpack,
-          Gulp, Babel, TSLint, ESLint, Popper.js, Select2, Malihu Scrollbar, Ion.RangeSlider, noUiSlider, HTML5, CSS3,
-          SASS/LESS, Bootstrap 3/4, Angular Powered Bootstrap 4/5, React Bootstrap, Material Design Icons, Font Awesome,
-          Responsive Design
-      - name: Back End
+          Vue.js 2, Angular 6/7/8, TypeScript 3.x/4.x, JavaScript ES6-11, jQuery 3.x, RxJS 6, AngularJS, React, JSX,
+          Moment.js, Luxon, Jasmine, Karma, Protractor, TypeMoq, npm, yarn, Webpack, Gulp, Babel, TSLint, ESLint,
+          HTML5, CSS3, SASS/LESS, Bootstrap 3/4, Responsive Design
+      - name: Cloud & DevOps
         value: >-
-          **Java**, **jOOQ**, **Node.js Express**, **NestJS** 8, **Sequelize** 4/5/6, **C#**, **.NET Core** 1/2/3/5,
-          **Python** 2/3, **Entity Framework Core** 1/2/5, Kotlin, C, JWT
-      - name: Front End
-        value: >-
-          **Angular** 1/6/7/8, **Vue.js** 2, **TypeScript** 3.x/4.x, **JavaScript** ES6+, jQuery 3.x, RxJS 6, React
+          AWS (S3/SQS/RDS), Azure (Service Bus, Storage, App Services, Active Directory), Google Cloud, Cloudflare,
+          Docker, Kubernetes, Jenkins, Azure Pipelines, New Relic, Sumo Logic
+      - name: Databases
+        value: MySQL, Microsoft SQL Server, Azure Cosmos DB, SQLite, Oracle DB
+      - name: Architecture
+        value: Microservices, Event-Driven Architecture, SOA, RESTful APIs, Protobuf, OpenAPI
+      - name: AI
+        value: Claude Code, Codex, Strata, Pandas, TensorFlow, Keras, Scikit-learn, NumPy, PyTorch
       - name: GIS
         value: Mapbox GL JS, Leaflet, Turf, TileJSON, GeoJSON, GeoJSON.NET, Tippecanoe, GDAL, WMTS
-      - name: Cloud Services
-        value: |-
-          AWS S3/SQS/RDS, Azure Service Bus (Queue/Topic), Storage (Blob/Table/Queue), App Services, Active Directory, Google App Engine, Cloud Storage, Compute Engine, Cloudflare
-      - name: Database
-        value: MySQL 5.7/8.0, Microsoft SQL Server 2016/2017/2019, Azure Cosmos DB, SQLite, Oracle DB
-      - name: AI
-        value: >-
-          Claude Code, Codex, Strata, ComfyUI, Pandas, TensorFlow 1/2, Keras, Scikit-learn, NumPy, SciPy, Matplotlib,
-          PyTorch
-      - name: Architectures
-        value: Microservices, Service Oriented Architecture (SOA), RESTful APIs
-      - name: Dev Tools
-        value: Jira, Confluence, GitHub, Azure DevOps (VSTS), Azure Repos, GitLab, Bitbucket, Postman
-      - name: DevOps
-        value: Azure Pipelines, Docker, Jenkins, Kubernetes, New Relic, Sumo Logic
-      - name: Methodologies
-        value: Agile, Scrum, Kanban, TDD, BDD, OOP, A/B Testing
       - name: Engineering
         hidden: true
         value: AutoCAD, SolidWorks, SketchUp, Pro/ENGINEER
-      - name: Design
-        value: LaTeX, Photoshop, GIMP
 
   - type: experience
     title: Professional Experience
