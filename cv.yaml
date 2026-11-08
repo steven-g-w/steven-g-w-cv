@@ -240,15 +240,6 @@ sections:
     title: Education Background
     icon: mortar-board
     entries:
-      - start: "2013"
-        end: "2013"
-        organization: University of New South Wales
-        location: Sydney
-        title: Master of Engineering Science
-        highlights:
-          - "GPA: 6.1/7.0, average: 83/100"
-        tags: [AutoCAD, Python, C#, C]
-
       - start: "2016"
         end: "2022"
         organization: Queensland University of Technology
@@ -258,6 +249,15 @@ sections:
           - 2 years of straight HDs (95% weighted average) while studying and working full time
           - GPA 6.6/7; nominated 3 times as Peer Learning Facilitator
         tags: [Java, C#, Python, C, .NET Core, SQL, R, Unix, HTML5, CSS3, JavaScript]
+
+      - start: "2013"
+        end: "2013"
+        organization: University of New South Wales
+        location: Sydney
+        title: Master of Engineering Science
+        highlights:
+          - "GPA: 6.1/7.0, average: 83/100"
+        tags: [AutoCAD, Python, C#, C]
 
       - start: "2006"
         end: "2010"
@@ -274,12 +274,6 @@ sections:
     items:
       - date: "2021"
         text: "Microsoft Certified: Azure Developer Associate"
-      - date: "2021"
-        text: "Microsoft Certified Solutions Developer: App Builder"
-      - date: "2021"
-        text: "Microsoft Certified Solutions Associate: Web Applications"
-      - date: "2020"
-        text: "Microsoft Certified: Azure Fundamentals"
       # - date: "2016"
       #   text: "Tier 2 Financial Product Adviser"
 
