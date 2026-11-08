@@ -207,10 +207,12 @@ sections:
         hidden: true
         organization: Umart Online
         location: Brisbane
-        title: IT Technician/Developer
+        title: IT Technician
+        summary: Umart is a computer and electronics retailer; joined as its first in-house technician.
         highlights:
-          - Developed an online store website and warehouse management web applications
-        tags: [PHP, HTML5, CSS3, JavaScript, Bootstrap 3]
+          - Built, tested and troubleshot customer and business PCs, covering both hardware and software issues
+          - Helped maintain the company's self-hosted website, including content and configuration updates
+        tags: [PC Hardware, Windows, Troubleshooting, Website Maintenance]
 
       - start: AUG 2010
         end: APR 2012
