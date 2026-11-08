@@ -34,7 +34,7 @@ sections:
     icon: tasks
     items:
       - name: Languages
-        value: "**Java**, **TypeScript**, **C#**, **Python**, JavaScript, Kotlin, SQL"
+        value: "**Java**, **TypeScript**, **C#**, **Python**, **SQL**, JavaScript, Kotlin"
       - name: Back End
         value: "**jOOQ**, **Node.js**, **NestJS**, **.NET Core**, Express, Entity Framework Core, Sequelize"
       - name: Front End
@@ -108,7 +108,7 @@ sections:
         title: Software Engineer
         summary: >-
           DoorDash is the leading food delivery company in the US market; worked in the logistics team until DoorDash
-          closed its Australian engineering team.
+          closed its Australian engineering function.
         highlights:
           - >-
             Designed and implemented a cancellation apology credit feature for consumer growth, validated through
