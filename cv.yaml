@@ -107,12 +107,14 @@ sections:
         organization: DoorDash
         location: Brisbane
         title: Software Engineer
-        summary: DoorDash is the leading food delivery company in the US market; worked as part of the logistics team.
+        summary: >-
+          DoorDash is the leading food delivery company in the US market; worked in the logistics team until DoorDash
+          closed its Australian engineering team.
         highlights:
           - >-
-            Designed and implemented an induced-cancellation apology credit feature for consumer growth, validated
-            through A/B testing with strong, statistically significant early results
-          - Implemented legacy service migration with a smooth, percentage-based rollout
+            Designed and implemented a cancellation apology credit feature for consumer growth, validated through
+            A/B testing
+          - Migrated a legacy service with a percentage-based rollout
         tags: [Kotlin, Python, TypeScript, React, AWS]
 
       - start: NOV 2019
