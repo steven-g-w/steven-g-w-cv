@@ -53,11 +53,13 @@ sections:
         value: MySQL, Microsoft SQL Server, Azure Cosmos DB, SQLite, Oracle DB
       - name: Architecture
         value: Microservices, Event-Driven Architecture, SOA, RESTful APIs, Protobuf, OpenAPI
+      - name: Engineering
+        value: TDD, BDD, CI/CD, Code Review, Observability, Incident Response, A/B Testing, Agile/Scrum
       - name: AI
         value: Claude Code, Codex, Strata, Pandas, TensorFlow, Keras, Scikit-learn, NumPy, PyTorch
       - name: GIS
         value: Mapbox GL JS, Leaflet, Turf, TileJSON, GeoJSON, GeoJSON.NET, Tippecanoe, GDAL, WMTS
-      - name: Engineering
+      - name: Mechanical Engineering
         hidden: true
         value: AutoCAD, SolidWorks, SketchUp, Pro/ENGINEER
 
