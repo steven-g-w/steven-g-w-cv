@@ -193,6 +193,7 @@ sections:
 
       - start: MAY 2015
         end: AUG 2017
+        hidden: true
         organization: Bank of China Australia
         location: Brisbane
         title: General Staff/IT Support
@@ -202,6 +203,7 @@ sections:
 
       - start: DEC 2013
         end: APR 2015
+        hidden: true
         organization: Umart Online
         location: Brisbane
         title: IT Technician/Developer
@@ -211,6 +213,7 @@ sections:
 
       - start: AUG 2010
         end: APR 2012
+        hidden: true
         organization: Shanghai Electric
         location: Shanghai
         title: Graduate Mechanical Engineer
