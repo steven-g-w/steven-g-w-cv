@@ -192,13 +192,15 @@ sections:
 
       - start: MAY 2015
         end: AUG 2017
-        hidden: true
         organization: Bank of China Australia
         location: Brisbane
-        title: General Staff/IT Support
+        title: Banking Operations Officer
+        summary: Joined the bank's first branch in Queensland as part of its operations team.
         highlights:
-          - Provided Queensland-wide IT support and developed applications to assist daily banking operations
-        tags: [C#, SQL, Windows Forms, PdfWriter, Python, Raspberry Pi]
+          - Handled daily retail and corporate banking operations
+          - >-
+            Became the branch's go-to IT support and built small tools to automate daily banking tasks
+        tags: [Retail Banking, Corporate Banking, C#, SQL, Python]
 
       - start: DEC 2013
         end: APR 2015
